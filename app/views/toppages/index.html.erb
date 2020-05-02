@@ -1,17 +1,70 @@
 <% if logged_in? %>
 
-  <p>ログイン完了ユーザ: 
-<%= current_user.name %>
-</p>
+  <div class="row">
+    <aside class="col-sm-4">
+      
+<%= form_with(model: @fish, url: fishs_path, local: true) do |f| %>
+
+        <div class="form-group">
+            
+<%= f.label :day, "Day" %>
+          
+<%= f.text_area :day, class: 'form-control', rows: 5 %>
+
+        </div>
+        
+        <div class="form-group">
+        
+<%= f.label :address, "Area" %>
+          
+<%= f.select :address, [["すそのフィッシングパーク", "すそのフィッシングパーク"], ["東山湖フィッシングエリア", "東山湖フィッシングエリア"], ["フィッシングポイント　ベリーズ", "フィッシングポイント　ベリーズ"]], include_blank: "Please select.", class: 'form-control', rows: 5  %>
+
+        </div>
+        
+        <div class="form-group">
+            
+<%= f.label :number, "Number" %>
+          
+<%= f.text_area :number, class: 'form-control', rows: 5 %>
+
+        </div>
+        
+        <div class="form-group">
+            
+<%= f.label :tackle, "Tackle" %>
+          
+<%= f.text_area :tackle, class: 'form-control', rows: 5 %>
+
+        </div>
+        
+        <div class="form-group">
+            
+<%= f.label :kind, "Kind" %>
+          
+<%= f.text_area :kind, class: 'form-control', rows: 5 %>
+
+        </div>
+        
+<%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
+
+      
+<% end %>
+
+    </aside>
+    <div class="col-sm-8">
+      
+<%= render 'fishs/fishs', fishs: @fishs %>
+
+    </div>
+  </div>
 <% else %>
 
-<div class="center jumbotron">
-  <div class="text-center">
-    <h1>dgangler</h1>
-    
-    <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
-    
-  </div>
-</div>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>dgangler</h1>
+      
+<%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
 
+    </div>
+  </div>
 <% end %>
