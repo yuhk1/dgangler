@@ -1,0 +1,103 @@
+
+
+<% if logged_in? %>
+
+<div class="row">
+    <aside class="col-sm-4">
+      
+<%= link_to "Record", new_fish_path %>
+
+    </aside>
+    <div class="col-sm-8">
+    <div>
+      <h2>Check on graph!</h2>
+	       <canvas id="onGraph" style="width: 100%; height: 300px;"></canvas>
+        
+        <!-- その他内容（任意） -->
+        
+        <!-- ②Chart.jsの読み込み -->
+        
+	
+	
+	
+	
+	
+    </div>
+
+
+<ul class="list-unstyled">
+  
+<% @fishs.each do |fish| %>
+
+    <li class="media mb-3">
+      <img class="mr-2 rounded" src="
+<%= gravatar_url(fish.user, { size: 50 }) %>
+" alt="">
+      <div class="media-body">
+        <div>
+<%= link_to fish.day, fish %>
+        </div>
+      </div>
+    </li>
+  
+<% end %>
+
+</ul>
+    </div>
+</div>
+
+<% else %>
+
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>Record your fishing results.</h1>
+        <h1>Challenge next fishing.</h1>
+        <p>dganglerは管理釣り場専用の釣果記録サービスです。</p>
+        <div class="btn-wrapper">
+            <%= link_to "Sing up", signup_path, class: 'btn btn-lg btn-primary' %>
+          <p>or</p>
+             <%= link_to "Sign in", login_path, class: 'btn btn-lg btn-primary' %>
+        </div>
+      </div>
+    </div>
+    
+    <div class="function-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>What you can do with dgangler.</h2>
+        </div>
+        <div class="functions">
+          <div class="function">
+            <div class="function-icon">
+              <!--<img src="https://prog-8.com/images/html/advanced/html.png">-->
+              <p>Record!</p>
+            </div>
+            <p class="text-contents">日々の釣果を詳細まで記録できます。</p>
+          </div>
+          <div class="function">
+            <div class="function-icon">
+              <!--<img src="https://prog-8.com/images/html/advanced/jQuery.png">-->
+              <p>Check!</p>
+            </div>
+            <p class="text-contents">月ごとに匹数をグラフで確認できます。</p>
+          </div>
+          <div class="function">
+            <div class="function-icon">
+              <!--<img src="https://prog-8.com/images/html/advanced/ruby.png">-->
+              <p>Favorite!</p>
+            </div>
+            <p class="text-contents">釣果のよかった日のタックルをお気に入り登録できます。</p>
+          </div>
+          <div class="function">
+            <div class="function-icon">
+              <!--<img src="/app/assets/images/function.JPG">-->
+              <p>Share!</p>
+            </div>
+            <p class="text-contents">SNSで釣果をシェアできます。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+<% end %>

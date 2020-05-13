@@ -13,4 +13,11 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require_tree .
+
+$('.date-picker').datetimepicker(pickTime: false);
+
+
+//= require chartkick
+//= require Chart.bundle
+
+//= require Chart

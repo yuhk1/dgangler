@@ -1,0 +1,23 @@
+<h1><%= @fish.day %>show</h1>
+
+<p>address: 
+<%= @fish.address %>
+</p>
+
+<p>number: 
+<%= @fish.number %>
+</p>
+
+<p>tackle: 
+<%= @fish.tackle %>
+</p>
+
+<p>kind: 
+<%= @fish.kind %>
+</p>
+
+<%= link_to "一覧に戻る", fishs_path %>
+
+<%= link_to "タスクを編集する", edit_fish_path(@fish) %>
+
+<%= link_to "このタスクを削除する", @fish, method: :delete, data: { confirm: "You sure？" } %>

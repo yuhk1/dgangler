@@ -1,15 +1,11 @@
-<% if logged_in? %>
+<%= form_with( model: @fish, url: fishs_path, local: true) do |f| %>
 
-  <div class="row">
-    <aside class="col-sm-4">
-      
-<%= form_with(model: @fish, url: fishs_path, local: true) do |f| %>
 
         <div class="form-group">
             
 <%= f.label :day, "Day" %>
           
-<%= f.text_area :day, class: 'form-control', rows: 5 %>
+<%= f.date_select :day, class: 'form-control date-picker', rows: 5 %>
 
         </div>
         
@@ -25,7 +21,7 @@
             
 <%= f.label :number, "Number" %>
           
-<%= f.text_area :number, class: 'form-control', rows: 5 %>
+<%= f.number_field :number, class: 'form-control hoge', min: 0, max: 200, rows: 5 %>
 
         </div>
         
@@ -41,30 +37,11 @@
             
 <%= f.label :kind, "Kind" %>
           
-<%= f.text_area :kind, class: 'form-control', rows: 5 %>
+<%= f.text_field :kind, class: 'form-control', rows: 5 %>
 
         </div>
         
 <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
 
       
-<% end %>
-
-    </aside>
-    <div class="col-sm-8">
-      
-<%= render 'fishs/fishs', fishs: @fishs %>
-
-    </div>
-  </div>
-<% else %>
-
-  <div class="center jumbotron">
-    <div class="text-center">
-      <h1>dgangler</h1>
-      
-<%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
-
-    </div>
-  </div>
 <% end %>
