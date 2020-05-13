@@ -8,11 +8,10 @@ class FishsController < ApplicationController
   
   def show
     
-   # @data = {'2019-06-01' => 100, '2019-06-02' => 200, '2019-06-03' => 150}#[:day, :number]
   end
 
   def new
-    @fish = current_user.fishs.build(fish_params)
+    @fish = current_user.fishs.build
   end
   
   def create

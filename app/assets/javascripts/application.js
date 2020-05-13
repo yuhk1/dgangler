@@ -14,6 +14,8 @@
 //= require activestorage
 //= require turbolinks
 
+//= require_tree .
+
 $('.date-picker').datetimepicker(pickTime: false);
 
 
