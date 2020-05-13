@@ -17,5 +17,5 @@ module Dgangler
     # the framework and any gems in your application.
   end
   
-  #config.time_zone = 'Asia/Tokyo'
+
 end

@@ -1,5 +1,10 @@
 {
-  "name": "dgangler",
+  "name": "yuhk1",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/yuhk1/dgangler.git",
+  "author": "yuhk1 <yuhk1.nakamura7@gmail.com>",
+  "license": "MIT"
 }

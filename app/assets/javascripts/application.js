@@ -16,10 +16,4 @@
 
 //= require_tree .
 
-$('.date-picker').datetimepicker(pickTime: false);
-
-
-//= require chartkick
-//= require Chart.bundle
-
-//= require Chart
+//('.date-picker').datetimepicker(pickTime: false);
