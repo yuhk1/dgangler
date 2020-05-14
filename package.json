@@ -1,7 +1,10 @@
 {
   "name": "yuhk1",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "chart.js": "^2.9.3",
+    "chartkick": "^3.2.0"
+  },
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/yuhk1/dgangler.git",

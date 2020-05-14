@@ -7,6 +7,16 @@
 
     </aside>
     <div class="col-sm-8">
+      
+      <div>
+      <h2>Check on graph!</h2>
+
+<%= line_chart @data, xtitle: "Day", ytitle: "Number", discrete: true, curve: false %>
+	
+	<!--group_by_day(:day).sum(:number), width: "800px", height: "300px" -->
+	
+	
+    </div>
 
 
 <ul class="list-unstyled">

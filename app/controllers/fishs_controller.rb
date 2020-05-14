@@ -4,6 +4,8 @@ class FishsController < ApplicationController
   
   def index
     @fishs = current_user.fishs
+    @data = Fish.pluck(:day, :number)
+    #{:created_at => 30, :day => 40}
   end
   
   def show
