@@ -21,3 +21,5 @@
 <%= link_to "タスクを編集する", edit_fish_path(@fish) %>
 
 <%= link_to "このタスクを削除する", @fish, method: :delete, data: { confirm: "You sure？" } %>
+
+<%= link_to "Twitter", "https://twitter.com/share?url=#{request.url}", target: '_blank' %>
